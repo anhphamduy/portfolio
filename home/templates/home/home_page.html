@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+    <section class="hero is-light">
+        <div class="hero-body">
+        <div class="container">
+            <div class="is-flex justify-space-between">
+                <h1 class="title is-size-5-mobile is-size-4">
+                    Latest posts     
+                </h1>
+                <a>
+                    Read more 
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="columns is-mobile is-multiline">
+                <div class="column is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+                <div class="column is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+                <div class="column is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+                <div class="column is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-body">
+        <div class="container">
+            <div class="is-flex justify-space-between">
+                <h1 class="title is-size-5-mobile is-size-4">
+                    Latest reviews     
+                </h1>
+                <a>Read more
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="columns is-mobile is-multiline">
+                <div class="column is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+                <div class="column  is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+                <div class="column is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+                <div class="column is-full-mobile is-6-tablet is-3-desktop">
+                    {% include 'common/card.html' %}
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="hero is-light is-info">
+        <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Or simply you want to learn more about me?</h1>
+            <h2 class="subtitle">
+                Let's have a chat!
+            </h2>
+            <a href="/about" class="button is-link">
+                Learn more
+            </a>
+        </div>
+        </div>
+    </section>
+{% endblock %}

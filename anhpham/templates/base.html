@@ -1,0 +1,49 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% with self.get_site.site_name as site_name %}
+                    {% if site_name %}- {{ site_name }}{% endif %}
+                {% endwith %}
+            {% endblock %}
+            | Anh Pham
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script defer src="{% static 'js/fontawesome.js' %}"></script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/anhpham.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bulma.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bulma-helpers.min.css' %}">
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+
+        {% include 'common/header.html' %}
+
+        {% block content %}{% endblock %}
+
+        {% include 'common/footer.html' %}
+
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/anhpham.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>

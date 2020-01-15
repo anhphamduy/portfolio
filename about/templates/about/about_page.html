@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<section class="hero is-link is-fullheight-with-navbar">
+    <div class="hero-body">
+        <div class="container">
+            <p class="title">
+                I am a full-stack developer and a technology enthuaist
+            </p>
+            <div>
+                <p class="subtitle">
+                    I create impactful websites to help businesses deliver <strong>bold</strong> statements.
+                </p>
+                <p class="subtitle">
+                    I love writing about and analysing <strong>social issues</strong>.
+                </p>
+            </div>
+            <div>
+                <a class="button is-info has-margin-top-20">
+                    Contact me now!
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                What am I up to?
+            </h1>
+            <div>
+                <h1 class="subtitle">Occupation</h1>
+                <div class="columns is-mobile is-multiline">
+                    <div class="column is-full-mobile is-9-tablet">
+                        <p class="content">
+                            Working at LOD (Lawyers On Demand) as a Software Developer, I help build the future of legal services.
+                        </p>
+                        <p class="content">
+                            LOD is the original alternative legal services provider, 
+                            founded in 2007. We’ve transformed the way in which lawyers, consultants and legal teams work. 
+                            Today, we’re one of the largest and fastest growing legal services businesses, continuing to lead the market we created.  
+                        </p>
+                    </div>
+                    <div class="column is-full-mobile is-3-tablet">
+                        <figure class="is-quarter-width-mobile has-min-width-100 has-min-width-150-mobile is-full-width-desktop">
+                        {% include 'common/lod_logo.html' %}
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="subtitle">Education</h1>
+            <div class="columns is-mobile is-multiline wrap-reverse-mobile">
+                <div class="column is-full-mobile is-2-tablet has-padding-right-20">
+                    <figure class="has-min-width-100 has-min-width-150-mobile is-quarter-width-mobile is-full-width-desktop">
+                        <img
+                            src="{% static 'images/unimelb-logo.jpg' %}"
+                        />
+                    </figure>
+                </div>
+                <div class="column is-full-mobile is-10-tablet">
+                    <p class="content">
+                        I'm currently in my second year at The University of Melbourne doing Bachelor of Science.
+                    </p>
+                    <p class="content">
+                        My major is in Computing & Software Systems. It ranks 14th in the world 
+                        as of 2019 according to the QS university ranking.
+                    </p>
+                    <p class="content">
+                        The University of Melbourne sits at the heart of a thriving international city 
+                        and is consistently ranked among the leading universities in the world and number one in Australia. 
+                        Four Australian prime ministers and five governors-general have graduated from the University of Melbourne.
+                    </p>
+                </div>      
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-info is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Passionate about newest technology</h1>
+        </div>
+    </div>
+</section>
+<section class="hero is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Talks and accredications</h1>
+            
+                <div class="columns">
+                    <div class="column">
+                        <h1 class="subtitle is-small">Talks</h1>
+                        <div class="content">
+                        <ul>
+                            <li>Emojifier in @ School - PyCon AU</li>
+                            <li>The truth behind Virtual DOM - Web Directions Summit</li>
+                            <li>Building a better developer experience for React and React Native - Canberra JS</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h1 class="subtitle">Accredications</h1>
+                        <div class="content">
+                            <ul>
+                                <li>CS50: CS50's Introduction to Computer Science - Harvard - EDx</li>
+                                <li>Deep Learning Specialization - Andrew Ng - Coursera</li>
+                                <li>Machine Learning - Andrew Ng - Coursera</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
